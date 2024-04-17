@@ -1,4 +1,4 @@
-import { IngredientsCard } from "./IngredientsCard";
+import { IngredientsCard } from "./IngredientsCard.tsx";
 
 export function RecipeCard()
 {
