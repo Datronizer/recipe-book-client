@@ -1,4 +1,4 @@
-import './App.css';
+import "./index.css"
 import { AppRouter } from './components/app/AppRouter.tsx';
 
 function App()
