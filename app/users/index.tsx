@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { UserDto } from "@/utils/dtos/User.dto";
 import { get } from "@/utils/server/Server";
 import { useEffect, useState } from "react";
@@ -21,10 +21,16 @@ export default function UsersList()
 
 
     return (
-        <View style={{ flex: 1 }}>
-            <Text>Users List</Text>
-
-            <Card>
+        <View 
+        className="mx-3"
+        style={{ 
+            flex: 1 
+            }}>
+            <Card className='w-full max-w-sm'> 
+                <CardHeader>
+                    <CardTitle>Card Title</CardTitle>
+                    <CardDescription>Card Description</CardDescription>
+                </CardHeader>
                 <CardContent>
                     <Text>Card Body Content</Text>
                 </CardContent>
