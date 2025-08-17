@@ -1,7 +1,8 @@
-import { Text, View } from "react-native";
+import { useRouter } from "expo-router";
+import { Button, Text, View } from "react-native";
 
 export default function Index() {
-  // const navigation: any = useNavigation();
+  const router = useRouter();
 
   return (
     <View
@@ -12,6 +13,7 @@ export default function Index() {
       }}
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Button title="Press me" onPress={() => router.navigate("/recipes")} />
     </View>
   );
 }
