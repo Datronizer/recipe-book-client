@@ -16,13 +16,11 @@ function RecipeCard(props: {
             <Card>
                 <CardHeader>
                     <CardTitle>{recipe.title}</CardTitle>
-                    <CardDescription>{recipe.author}</CardDescription>
+                    <CardDescription>By {recipe.author}</CardDescription>
                 </CardHeader>
                 <CardContent>
-
-                    {/* <Image source={{ uri: recipe.imageUrl }} /> */}
-                    <Text>{recipe.title}</Text>
                     <Text>{recipe.description}</Text>
+                    {/* <Image source={{ uri: recipe.imageUrl }} /> */}
                 </CardContent>
             </Card>
         </Pressable>
