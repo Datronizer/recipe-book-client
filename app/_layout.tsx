@@ -2,8 +2,9 @@ import '~/global.css';
 
 import { NAV_THEME } from '@/lib/constants';
 import { DarkTheme, DefaultTheme, Theme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
+import { Tabs } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { Apple, CookingPotIcon, HomeIcon, User } from 'lucide-react-native';
 import * as React from 'react';
 import { Platform } from 'react-native';
 import { useColorScheme } from '~/lib/useColorScheme';
@@ -53,7 +54,36 @@ export default function RootLayout()
     return (
         <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
             <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
-            <Stack />
+            <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+                <Tabs.Screen
+                    name="(root)"
+                    options={{
+                        title: 'Home',
+                        tabBarIcon: ({ color }) => <HomeIcon size={28} color={color} />,
+                    }}
+                />
+                <Tabs.Screen
+                    name="recipes"
+                    options={{
+                        title: 'Recipes',
+                        tabBarIcon: ({ color }) => <CookingPotIcon size={28} color={color} />,
+                    }}
+                />
+                <Tabs.Screen
+                    name="ingredients"
+                    options={{
+                        title: 'Ingredients',
+                        tabBarIcon: ({ color }) => <Apple size={28} color={color} />,
+                    }}
+                />
+                <Tabs.Screen
+                    name="users"
+                    options={{
+                        title: 'Profile',
+                        tabBarIcon: ({ color }) => <User size={28} color={color} />,
+                    }}
+                />
+            </Tabs>
         </ThemeProvider>
     );
 }
