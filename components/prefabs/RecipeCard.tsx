@@ -1,5 +1,6 @@
 import { RecipeDto } from "@/utils/dtos/Recipe.dto";
-import { Text } from "react-native";
+import { useRouter } from "expo-router";
+import { Pressable, Text } from "react-native";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 
 function RecipeCard(props: {
@@ -7,20 +8,24 @@ function RecipeCard(props: {
 })
 {
     const { recipe } = props;
+    const router = useRouter();
 
     return (
-        <Card>
-            <CardHeader>
-                <CardTitle>{recipe.title}</CardTitle>
-                <CardDescription>{recipe.author}</CardDescription>
-            </CardHeader>
-            <CardContent>
-                
-                {/* <Image source={{ uri: recipe.imageUrl }} /> */}
-                <Text>{recipe.title}</Text>
-                <Text>{recipe.description}</Text>
-            </CardContent>
-        </Card>
+        <Pressable
+            onPress={() => router.navigate(`/recipes/${recipe.id}`)}>
+            <Card>
+                <CardHeader>
+                    <CardTitle>{recipe.title}</CardTitle>
+                    <CardDescription>{recipe.author}</CardDescription>
+                </CardHeader>
+                <CardContent>
+
+                    {/* <Image source={{ uri: recipe.imageUrl }} /> */}
+                    <Text>{recipe.title}</Text>
+                    <Text>{recipe.description}</Text>
+                </CardContent>
+            </Card>
+        </Pressable>
     );
 }
 
