@@ -15,6 +15,7 @@
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.3.8",
     "@react-navigation/native": "^7.1.6",
+    "@rn-primitives/label": "^1.2.0",
     "@rn-primitives/slot": "^1.2.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
