@@ -42,8 +42,8 @@ export default function RecipeDetails()
                     <CardDescription>{recipe.author}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <Text>{recipe.title}</Text>
                     <Text>{recipe.description}</Text>
+                    <Text>{recipe.instructions}</Text>
                 </CardContent>
             </Card>
         </View>

@@ -101,6 +101,10 @@ export default function AddIngredients()
                 className="mb-4"
             />
 
+            <Input
+                placeholder="Nutrient Type"
+                inputMode=""
+
             <View style={{ flexDirection: 'row', gap: 10 }}>
                 <Button onPress={addRecipe} title={"Add Recipe"} />
                 <Button onPress={addDefaultRecipe} title={"Add Default Recipe"} />
